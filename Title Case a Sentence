@@ -1,21 +1,20 @@
-
 function titleCase(str) {
   var arr=[];
-  var arrWord=[];
   var word="";
-  var newSentence=" ";
+  var firstLetter="";
+  var newSentence="";
+  
+  str=str.toLowerCase();
   arr=str.split(" ");
   
   for (i=0;i<arr.length;i++){
     word=arr[i];
-    
-    arrWord=word.charAt(0);
-    word.charAt(0).toUpperCase();
-    word=arrWord[i];
+    firstLetter=word.charAt(0).toUpperCase();
+    word=firstLetter+ word.substring(1);
     arr[i]=word; 
   }
   
-  newSentence=arr.join();
+  newSentence=arr.join(" ");
   return newSentence;
 }
 
