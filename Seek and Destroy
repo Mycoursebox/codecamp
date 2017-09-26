@@ -1,23 +1,24 @@
 function destroyer(arr) {
-  
+ 
   var initialArray=[];
   for (i=0;i<arr[0].length;i++){
     initialArray.push(arr[0][i]);
   }
  
-  var newArray=[];
   var numberArguments=arr.length-1; 
   var argument;
   
-  
+    
   for (i=0;i<numberArguments;i++){
-    argument=arr[i+1];
- newArray=initialArray.filter(function(num){
-   return (num!==argument);
-                              });
-  
+          argument=arr[i+1];
+    for (j=0;j<initialArray.length;j++){
+    if (argument===initialArray[j])
+        initialArray.splice(j,1);
+        }
+
   }
-return newArray;
+return initialArray;
 }
 
-destroyer([[1, 2, 3, 1, 2, 3], 2, 3]);
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
