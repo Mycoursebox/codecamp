@@ -1,14 +1,14 @@
 function destroyer(arr) {
+  
+  var initialArray=[];
+  for (i=0;i<arr[0].length;i++){
+    initialArray.push(arr[0][i]);
+  }
  
-  var initialArray=arr[0];
   var newArray=[];
   var numberArguments=arr.length-1; 
-  var num;
   var argument;
   
-  function checkEqual(num){
-        return (num!==argument);
-  }
   
   for (i=0;i<numberArguments;i++){
     argument=arr[i+1];
@@ -20,4 +20,4 @@ function destroyer(arr) {
 return newArray;
 }
 
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+destroyer([[1, 2, 3, 1, 2, 3], 2, 3]);
