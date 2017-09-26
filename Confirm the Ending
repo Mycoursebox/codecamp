@@ -17,3 +17,12 @@ return false;
 
 
 confirmEnding("Bastian", "n");
+
+
+/*PP's solution:
+function confirmEnding(str, target) {
+
+  
+  return str.test(new RegEx(target + "$"));
+}
+*/
