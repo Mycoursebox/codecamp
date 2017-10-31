@@ -29,21 +29,19 @@ var name="";
 function lookUpProfile(firstName, prop){
 
 
-  for (i=0; i<contacts.length;i++){
-    name=contacts[i].firstName;
-    if (firstName===name){
-      if (contacts[i].hasOwnProperty(prop)){
-        return contacts[i][prop];
-      } else {
-        return "No such property";
-      }
-      
-    }
-   
-  }
-    return "No such contact";
-  
+    for (i = 0; i < contacts.length; i++){
+        name = contacts[i].firstName;
+        if (firstName === name){
+            if (contacts[i].hasOwnProperty(prop)){
+                return contacts[i][prop];
+            } else {
+                return "No such property";
+            }
 
+        }
+
+    }
+    return "No such contact";
 
 }
 
