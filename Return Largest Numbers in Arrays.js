@@ -1,20 +1,20 @@
 function largestOfFour(arr) {
-  var number=0;
-  var result=0; 
-  var newArr=[];
-  for (i=0;i<arr.length;i++){
-    result=0;
-    for (j=0;j<arr[i].length;j++){
-   
-      number=arr[i][j];
-      
-      if(number>result){
-        result=number; 
-    
-      }
+    var number=0;
+    var result=0;
+    var newArr=[];
+    for (i=0;i<arr.length;i++){
+        result=0;
+        for (j=0;j<arr[i].length;j++){
+
+            number=arr[i][j];
+
+            if(number>result){
+                result=number;
+                
+            }
+        }
+        newArr[i]=result;
     }
-    newArr[i]=result;
-  }
 
     return newArr;
 }
